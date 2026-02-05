@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="C-conn:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/C_conn_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="C-conn/web/Web" />
+    </root>
+  </artifact>
+</component>
