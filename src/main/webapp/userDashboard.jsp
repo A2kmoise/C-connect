@@ -103,11 +103,21 @@
 
       <!-- Dashboard Content -->
       <div class="p-10">
-        <div class="mb-10">
-          <h1 class="text-4xl font-bold text-white mb-2">Welcome back, Moise!</h1>
-          <p class="text-gray-400">Here's what's happening with your network in <span
-              class="text-blue-400 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 italic">Kigali</span>.
-          </p>
+        <div class="mb-10 flex justify-between items-center">
+          <div>
+            <h1 class="text-4xl font-bold text-white mb-2">Welcome back, Moise!</h1>
+            <p class="text-gray-400">Here's what's happening with your <span
+                class="text-blue-400 font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500 italic">School</span>.
+            </p>
+          </div>
+          <button onclick="toggleModal('complaintModal')"
+            class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Add Complaint
+          </button>
         </div>
 
         <!-- Stats Grid -->
@@ -115,25 +125,17 @@
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
             <h4 class="text-gray-400 text-sm font-medium mb-1">Fellow students</h4>
             <div class="flex items-end justify-between">
-              <span class="text-3xl font-bold text-white">+24</span>
-              <span class="text-emerald-500 text-xs font-bold mb-1">↑ 12%</span>
+              <span class="text-3xl font-bold text-white">24</span>
             </div>
             <p class="text-xs text-gray-500 mt-4 leading-relaxed">All students in your campus.</p>
-            <button
-              class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">View
-              All</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
             <h4 class="text-gray-400 text-sm font-medium mb-1">Campus teachers</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">186</span>
-              <span class="text-emerald-500 text-xs font-bold mb-1">↑ 8%</span>
             </div>
             <p class="text-xs text-gray-500 mt-4 leading-relaxed">All campus teachers</p>
-            <button
-              class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">Who
-              Viewed</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
@@ -144,17 +146,16 @@
             </div>
             <p class="text-xs text-gray-500 mt-4 leading-relaxed">Some messages from principle</p>
             <button
-              class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">Browse
-              Jobs</button>
+              class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">View</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
             <h4 class="text-gray-400 text-sm font-medium mb-1">Assignments</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">02</span>
-              <span class="text-purple-500 text-xs font-bold mb-1">Invited</span>
+              <span class="text-purple-500 text-xs font-bold mb-1">new</span>
             </div>
-            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Blockchain seminar invitation at Serena Hotel.</p>
+            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Teacher's assignment.</p>
             <button
               class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">Get
               Details</button>
@@ -208,7 +209,51 @@
       </div>
     </main>
 
+    <!-- Complaint Modal -->
+    <div id="complaintModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+      <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+          onclick="toggleModal('complaintModal')"></div>
+        <div class="card-glass relative w-full max-w-lg p-8 rounded-2xl shadow-2xl">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-white">Add New Complaint</h2>
+            <button onclick="toggleModal('complaintModal')" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1">Subject</label>
+              <input type="text"
+                class="w-full bg-gray-900/50 border border-gray-800 rounded-xl py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/30 text-white transition-all"
+                placeholder="Enter complaint subject">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1">Description</label>
+              <textarea rows="4"
+                class="w-full bg-gray-900/50 border border-gray-800 rounded-xl py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500/30 text-white transition-all"
+                placeholder="Describe your complaint"></textarea>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button type="button" onclick="toggleModal('complaintModal')"
+                class="flex-1 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition-all">Cancel</button>
+              <button type="submit"
+                class="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-500/20">Submit
+                Complaint</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script>
+      function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle('hidden');
+      }
+
       function toggleAccordion(id) {
         const content = document.getElementById(id);
         const icon = document.getElementById('icon-' + id);

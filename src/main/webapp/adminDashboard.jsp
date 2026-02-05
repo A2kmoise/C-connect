@@ -83,9 +83,19 @@
 
       <!-- Dashboard Content -->
       <div class="p-10">
-        <div class="mb-10">
-          <h1 class="text-3xl font-bold text-white mb-2">Platform Overview</h1>
-          <p class="text-gray-400">Manage users, connections, and system performance.</p>
+        <div class="mb-10 flex justify-between items-center">
+          <div>
+            <h1 class="text-3xl font-bold text-white mb-2">Platform Overview</h1>
+            <p class="text-gray-400">Manage users, connections, and system performance.</p>
+          </div>
+          <button onclick="toggleModal('announcementModal')"
+            class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-500/20 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Add Announcement
+          </button>
         </div>
 
         <!-- Stats Grid -->
@@ -123,6 +133,61 @@
         </div>
       </div>
     </main>
+
+    <!-- Announcement Modal -->
+    <div id="announcementModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+      <div class="flex items-center justify-center min-h-screen px-4">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+          onclick="toggleModal('announcementModal')"></div>
+        <div class="card-glass relative w-full max-w-lg p-8 rounded-2xl shadow-2xl text-gray-200">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-white">Add New Announcement</h2>
+            <button onclick="toggleModal('announcementModal')" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <form class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1">Announcement Subject</label>
+              <input type="text"
+                class="w-full bg-gray-900/50 border border-gray-800 rounded-xl py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500/30 text-white transition-all"
+                placeholder="Enter announcement subject">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1">Target Audience</label>
+              <select
+                class="w-full bg-gray-900/50 border border-gray-800 rounded-xl py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500/30 text-white transition-all">
+                <option value="all">All Users</option>
+                <option value="students">Students</option>
+                <option value="teachers">Teachers</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1">Message Body</label>
+              <textarea rows="4"
+                class="w-full bg-gray-900/50 border border-gray-800 rounded-xl py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500/30 text-white transition-all"
+                placeholder="Enter the announcement message"></textarea>
+            </div>
+            <div class="flex gap-4 pt-4">
+              <button type="button" onclick="toggleModal('announcementModal')"
+                class="flex-1 py-2.5 bg-gray-800 hover:bg-gray-700 text-white font-bold rounded-xl transition-all">Cancel</button>
+              <button type="submit"
+                class="flex-1 py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-red-500/20">Post
+                Announcement</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleModal(id) {
+        const modal = document.getElementById(id);
+        modal.classList.toggle('hidden');
+      }
+    </script>
   </body>
 
   </html>
