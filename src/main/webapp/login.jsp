@@ -33,7 +33,7 @@
           C-<span class="text-blue-500">connect</span>
         </h2>
         <h3 class="text-xl font-semibold mb-2 text-white text-center">Welcome back</h3>
-        <p class="text-sm text-gray-400 text-center mb-8">Login to your professional dashboard.</p>
+        <p class="text-sm text-gray-400 text-center mb-8">Login to your dashboard.</p>
 
         <form action="login" method="POST" class="space-y-5">
           <div>
@@ -45,7 +45,6 @@
           <div>
             <div class="flex justify-between mb-1.5 ml-1">
               <label class="block text-sm font-medium text-gray-400">Password</label>
-              <a href="#" class="text-xs text-blue-500 hover:text-blue-400">Forgot?</a>
             </div>
             <input type="password" name="password" placeholder="••••••••" required
               class="w-full px-4 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-gray-600" />
@@ -60,7 +59,7 @@
           <div class="pt-2">
             <button type="submit"
               class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/20">
-              Login to C-connect
+             <a href="adminDashboard.jsp">Login to C-connect</a>
             </button>
           </div>
         </form>

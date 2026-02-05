@@ -33,7 +33,7 @@
           C-<span class="text-blue-500">connect</span>
         </h2>
         <h3 class="text-xl font-semibold mb-2 text-white text-center">Create your account</h3>
-        <p class="text-sm text-gray-400 text-center mb-8">Join the network and start connecting today.</p>
+        <p class="text-sm text-gray-400 text-center mb-8">Join the campus today.</p>
 
         <form action="signup" method="POST" class="space-y-5">
           <div>
@@ -57,7 +57,7 @@
           <div class="pt-2">
             <button type="submit"
               class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/20">
-              Join Connection
+              <a href="userDashboard.jsp">Join</a>
             </button>
           </div>
         </form>
