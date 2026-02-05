@@ -113,43 +113,43 @@
         <!-- Stats Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Connections Gained</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Fellow students</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">+24</span>
               <span class="text-emerald-500 text-xs font-bold mb-1">↑ 12%</span>
             </div>
-            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Mostly from Rwanda tech sector last 7 days.</p>
+            <p class="text-xs text-gray-500 mt-4 leading-relaxed">All students in your campus.</p>
             <button
               class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">View
               All</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Profile Viewers</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Campus teachers</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">186</span>
               <span class="text-emerald-500 text-xs font-bold mb-1">↑ 8%</span>
             </div>
-            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Viewed by recruiters from major tech hubs.</p>
+            <p class="text-xs text-gray-500 mt-4 leading-relaxed">All campus teachers</p>
             <button
               class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">Who
               Viewed</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Job Opportunities</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Principle messages</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">04</span>
               <span class="text-blue-500 text-xs font-bold mb-1">New</span>
             </div>
-            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Software engineer roles in Kigali-Rwanda.</p>
+            <p class="text-xs text-gray-500 mt-4 leading-relaxed">Some messages from principle</p>
             <button
               class="mt-6 w-full py-2 bg-blue-600/10 group-hover:bg-blue-600 text-blue-400 group-hover:text-white rounded-lg text-xs font-bold transition-all">Browse
               Jobs</button>
           </div>
 
           <div class="card-glass p-6 rounded-2xl hover:bg-gray-800/60 transition-all group">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Pending Invitations</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Assignments</h4>
             <div class="flex items-end justify-between">
               <span class="text-3xl font-bold text-white">02</span>
               <span class="text-purple-500 text-xs font-bold mb-1">Invited</span>
@@ -168,7 +168,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            Announcements
+            Software help
           </h2>
 
           <div class="space-y-4">

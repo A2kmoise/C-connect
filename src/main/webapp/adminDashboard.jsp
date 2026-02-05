@@ -91,21 +91,21 @@
         <!-- Stats Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           <div class="card-glass p-6 rounded-2xl">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Total Users</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Total Students</h4>
             <span class="text-3xl font-bold text-white">1,284</span>
           </div>
           <div class="card-glass p-6 rounded-2xl">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">New Signups (24h)</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Messages</h4>
             <span class="text-3xl font-bold text-emerald-500">42</span>
           </div>
           <div class="card-glass p-6 rounded-2xl">
-            <h4 class="text-gray-400 text-sm font-medium mb-1">Active Connections</h4>
+            <h4 class="text-gray-400 text-sm font-medium mb-1">Teachers</h4>
             <span class="text-3xl font-bold text-blue-500">8,921</span>
           </div>
         </div>
 
         <div class="card-glass rounded-2xl p-8">
-          <h3 class="text-xl font-bold mb-6">Recent Activity</h3>
+          <h3 class="text-xl font-bold mb-6">Recent suggestions</h3>
           <div class="space-y-4">
             <div class="flex items-center justify-between py-3 border-b border-white/5">
               <span class="text-sm text-gray-300">New user "albert_k" joined from Kigali</span>
