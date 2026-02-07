@@ -13,11 +13,6 @@
         font-family: 'Outfit', sans-serif;
       }
 
-      .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-      }
-
       .card-glass {
         background: rgba(31, 41, 55, 0.4);
         backdrop-filter: blur(8px);
