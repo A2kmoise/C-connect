@@ -36,32 +36,37 @@
         <p class="text-sm text-gray-400 text-center mb-8">Login to your dashboard.</p>
 
         <form action="login" method="POST" class="space-y-5">
-          <div>
-            <label class="block text-sm font-medium text-gray-400 mb-1.5 ml-1">Email or Username</label>
-            <input type="text" name="identifier" placeholder="john@example.com" required
-              class="w-full px-4 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-gray-600" />
-          </div>
-
-          <div>
-            <div class="flex justify-between mb-1.5 ml-1">
-              <label class="block text-sm font-medium text-gray-400">Password</label>
+          <% if (request.getAttribute("error") !=null) { %>
+            <div class="p-3 rounded-lg bg-red-500/10 border border-red-500/20 text-red-500 text-sm text-center">
+              <%= request.getAttribute("error") %>
             </div>
-            <input type="password" name="password" placeholder="••••••••" required
-              class="w-full px-4 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-gray-600" />
-          </div>
+            <% } %>
+              <div>
+                <label class="block text-sm font-medium text-gray-400 mb-1.5 ml-1">Email or Username</label>
+                <input type="text" name="identifier" placeholder="john@example.com" required
+                  class="w-full px-4 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-gray-600" />
+              </div>
 
-          <div class="flex items-center space-x-2 ml-1">
-            <input type="checkbox" id="remember"
-              class="w-4 h-4 rounded border-gray-700 bg-gray-900/50 text-blue-600 focus:ring-blue-500/50">
-            <label for="remember" class="text-sm text-gray-400">Remember me</label>
-          </div>
+              <div>
+                <div class="flex justify-between mb-1.5 ml-1">
+                  <label class="block text-sm font-medium text-gray-400">Password</label>
+                </div>
+                <input type="password" name="password" placeholder="••••••••" required
+                  class="w-full px-4 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-gray-600" />
+              </div>
 
-          <div class="pt-2">
-            <button type="submit"
-              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/20">
-             <a href="adminDashboard.jsp">Login to C-connect</a>
-            </button>
-          </div>
+              <div class="flex items-center space-x-2 ml-1">
+                <input type="checkbox" id="remember"
+                  class="w-4 h-4 rounded border-gray-700 bg-gray-900/50 text-blue-600 focus:ring-blue-500/50">
+                <label for="remember" class="text-sm text-gray-400">Remember me</label>
+              </div>
+
+              <div class="pt-2">
+                <button type="submit"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/20">
+                  Login to C-connect
+                </button>
+              </div>
         </form>
 
         <p class="mt-8 text-center text-sm text-gray-400">
