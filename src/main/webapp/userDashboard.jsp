@@ -6,8 +6,10 @@
           <% User user=(User) session.getAttribute("user"); List<Announcement> announcements = (List<Announcement>)
               request.getAttribute("announcements");
               List<Task> tasks = (List<Task>) request.getAttribute("tasks");
-                  Long studentCount = (Long) request.getAttribute("studentCount");
-                  Long teacherCount = (Long) request.getAttribute("teacherCount");
+                  Long sCountAttr = (Long) request.getAttribute("studentCount");
+                  long studentCount = (sCountAttr != null && sCountAttr > 0) ? sCountAttr - 1 : 0;
+                  Long tCountAttr = (Long) request.getAttribute("teacherCount");
+                  long teacherCount = (tCountAttr != null) ? tCountAttr : 0;
                   %>
                   <!DOCTYPE html>
                   <html lang="en">
@@ -50,7 +52,7 @@
                       <nav class="mt-4">
                         <ul class="space-y-2">
                           <li>
-                            <a href="userDashboard.jsp"
+                            <a href="userDashboard"
                               class="flex items-center space-x-3 px-8 py-4 sidebar-active text-blue-400 font-semibold transition-all">
                               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="2">
@@ -134,7 +136,7 @@
                             <h4 class="text-gray-400 text-sm font-medium mb-1">Fellow students</h4>
                             <div class="flex items-end justify-between">
                               <span class="text-3xl font-bold text-white">
-                                <%= studentCount !=null ? studentCount : "0" %>
+                                <%= studentCount %>
                               </span>
                             </div>
                             <p class="text-xs text-gray-500 mt-4 leading-relaxed">All students in your campus.</p>
@@ -144,7 +146,7 @@
                             <h4 class="text-gray-400 text-sm font-medium mb-1">Campus teachers</h4>
                             <div class="flex items-end justify-between">
                               <span class="text-3xl font-bold text-white">
-                                <%= teacherCount !=null ? teacherCount : "0" %>
+                                <%= teacherCount %>
                               </span>
                             </div>
                             <p class="text-xs text-gray-500 mt-4 leading-relaxed">All campus teachers</p>

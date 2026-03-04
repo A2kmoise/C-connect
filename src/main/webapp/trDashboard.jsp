@@ -4,8 +4,10 @@
             <%@ page import="java.util.List" %>
                 <% User user=(User) session.getAttribute("user"); List<Task> teacherTasks = (List<Task>)
                         request.getAttribute("tasks");
-                        Long studentCount = (Long) request.getAttribute("studentCount");
-                        Long teacherCount = (Long) request.getAttribute("teacherCount");
+                        Long sCountAttr = (Long) request.getAttribute("studentCount");
+                        long studentCount = (sCountAttr != null) ? sCountAttr : 0;
+                        Long tCountAttr = (Long) request.getAttribute("teacherCount");
+                        long teacherCount = (tCountAttr != null) ? tCountAttr : 0;
                         %>
                         <!DOCTYPE html>
                         <html lang="en">
@@ -52,7 +54,7 @@
                                 <nav class="mt-4">
                                     <ul class="space-y-2">
                                         <li>
-                                            <a href="trDashboard.jsp"
+                                            <a href="trDashboard"
                                                 class="flex items-center space-x-3 px-8 py-4 sidebar-active text-red-400 font-semibold transition-all">
                                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-400"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -125,13 +127,13 @@
                                         <div class="card-glass p-6 rounded-2xl">
                                             <h4 class="text-gray-400 text-sm font-medium mb-1">Total Students</h4>
                                             <span class="text-3xl font-bold text-white">
-                                                <%= studentCount !=null ? studentCount : "0" %>
+                                                <%= studentCount %>
                                             </span>
                                         </div>
                                         <div class="card-glass p-6 rounded-2xl">
                                             <h4 class="text-gray-400 text-sm font-medium mb-1">Teachers</h4>
                                             <span class="text-3xl font-bold text-blue-500">
-                                                <%= teacherCount !=null ? teacherCount : "0" %>
+                                                <%= teacherCount %>
                                             </span>
                                         </div>
                                     </div>
