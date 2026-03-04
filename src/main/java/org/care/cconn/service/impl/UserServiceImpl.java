@@ -15,6 +15,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User register(User user) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            throw new IllegalArgumentException("Email already exists");
+        }
+        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+            throw new IllegalArgumentException("Username already exists");
+        }
         // Simple password hashing/check could be added here
         return userRepository.save(user);
     }
