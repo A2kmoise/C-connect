@@ -23,7 +23,8 @@ public class ComplaintServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             response.sendRedirect("login.jsp");
@@ -36,6 +37,6 @@ public class ComplaintServlet extends HttpServlet {
         Complaint complaint = new Complaint(subject, description, user);
         complaintService.createComplaint(complaint);
 
-        response.sendRedirect("userDashboard.jsp");
+        response.sendRedirect("userDashboard");
     }
 }

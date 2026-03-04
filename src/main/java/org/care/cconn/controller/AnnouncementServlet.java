@@ -23,7 +23,8 @@ public class AnnouncementServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             response.sendRedirect("login.jsp");
@@ -37,6 +38,6 @@ public class AnnouncementServlet extends HttpServlet {
         Announcement announcement = new Announcement(subject, body, audience, user);
         announcementService.createAnnouncement(announcement);
 
-        response.sendRedirect("adminDashboard.jsp");
+        response.sendRedirect("adminDashboard");
     }
 }
