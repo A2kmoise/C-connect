@@ -23,17 +23,29 @@ public class SignupServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        
-        // Default to STUDENT for signup
-        User user = new User(username, email, password, Role.STUDENT);
-        userService.register(user);
+        String roleStr = request.getParameter("role");
+        Role role = Role.valueOf(roleStr);
 
-        // Auto login or redirect to login page
-        request.getSession().setAttribute("user", user);
-        response.sendRedirect("userDashboard");
+        User user = new User(username, email, password, role);
+        try {
+            userService.register(user);
+            // Auto login or redirect to login page
+            request.getSession().setAttribute("user", user);
+
+            // Redirect based on role
+            if (role == Role.TEACHER) {
+                response.sendRedirect("trDashboard");
+            } else {
+                response.sendRedirect("userDashboard");
+            }
+        } catch (IllegalArgumentException e) {
+            request.setAttribute("error", e.getMessage());
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+        }
     }
 }

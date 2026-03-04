@@ -24,7 +24,8 @@ public class TaskServlet extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             response.sendRedirect("login.jsp");
@@ -38,6 +39,6 @@ public class TaskServlet extends HttpServlet {
         Task task = new Task(title, description, LocalDate.parse(dueDateStr), user);
         taskService.createTask(task);
 
-        response.sendRedirect("trDashboard.jsp");
+        response.sendRedirect("trDashboard");
     }
 }
