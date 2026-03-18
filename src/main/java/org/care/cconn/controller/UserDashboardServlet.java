@@ -35,7 +35,7 @@ public class UserDashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null || user.getRole() != Role.STUDENT) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
             return;
         }
 
@@ -46,6 +46,6 @@ public class UserDashboardServlet extends HttpServlet {
         request.setAttribute("tasks", tasks);
         request.setAttribute("studentCount", userService.getCountByRole(Role.STUDENT));
         request.setAttribute("teacherCount", userService.getCountByRole(Role.TEACHER));
-        request.getRequestDispatcher("userDashboard.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/userDashboard.jsp").forward(request, response);
     }
 }
