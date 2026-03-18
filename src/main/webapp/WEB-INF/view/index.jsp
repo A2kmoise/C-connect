@@ -29,8 +29,8 @@
             C-<span class="text-blue-500">connect</span>
         </div>
         <div class="space-x-4">
-            <a href="login.jsp" class="px-6 py-2 rounded-full font-medium hover:text-blue-400 transition-colors">Login</a>
-            <a href="signup.jsp" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/20">Get Started</a>
+            <a href="login" class="px-6 py-2 rounded-full font-medium hover:text-blue-400 transition-colors">Login</a>
+            <a href="signup" class="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/20">Get Started</a>
         </div>
     </nav>
 
@@ -48,7 +48,7 @@
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 mb-20">
-            <a href="signup.jsp" class="px-10 py-4 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-blue-600/25">
+            <a href="signup" class="px-10 py-4 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-xl shadow-blue-600/25">
                 Join Now
             </a>
             <a href="#features" class="px-10 py-4 glass hover:bg-white/5 rounded-xl font-bold text-lg transition-all border border-white/10">

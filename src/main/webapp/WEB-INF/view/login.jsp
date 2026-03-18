@@ -71,7 +71,7 @@
 
         <p class="mt-8 text-center text-sm text-gray-400">
           Don't have an account?
-          <a href="signup.jsp" class="text-blue-500 hover:text-blue-400 font-semibold underline underline-offset-4">Sign
+          <a href="signup" class="text-blue-500 hover:text-blue-400 font-semibold underline underline-offset-4">Sign
             up</a>
         </p>
       </div>

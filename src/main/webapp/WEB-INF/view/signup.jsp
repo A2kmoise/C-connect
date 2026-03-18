@@ -80,7 +80,7 @@
 
             <p class="mt-8 text-center text-sm text-gray-400">
               Already have an account?
-              <a href="login.jsp"
+              <a href="login"
                 class="text-blue-500 hover:text-blue-400 font-semibold underline underline-offset-4">Login</a>
             </p>
       </div>
