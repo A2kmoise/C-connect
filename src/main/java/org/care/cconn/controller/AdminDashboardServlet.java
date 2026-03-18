@@ -31,7 +31,7 @@ public class AdminDashboardServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         if (user == null || user.getRole() != Role.ADMIN) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login");
             return;
         }
 
@@ -40,6 +40,6 @@ public class AdminDashboardServlet extends HttpServlet {
         request.setAttribute("studentCount", userService.getCountByRole(Role.STUDENT));
         request.setAttribute("teacherCount", userService.getCountByRole(Role.TEACHER));
         
-        request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/view/adminDashboard.jsp").forward(request, response);
     }
 }
